@@ -10,16 +10,21 @@ namespace PracticeSQLApp.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         public List<Product> Products;
+        private readonly IProductService _productService;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        //public IndexModel(ILogger<IndexModel> logger)
+        //{
+        //    _logger = logger;
+        //}
+
+        public IndexModel(IProductService productService)
         {
-            _logger = logger;
+            _productService = productService;
         }
 
         public void OnGet()
         {
-            ProductService productsService = new ProductService();
-            Products =  productsService.GetProducts();
+            Products =  _productService.GetProducts();
         }
     }
 }
