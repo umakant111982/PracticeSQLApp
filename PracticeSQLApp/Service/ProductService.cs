@@ -18,7 +18,8 @@ namespace PracticeSQLApp.Service
 
         private SqlConnection GetConnection()
         {
-            return new SqlConnection(_configuration.GetConnectionString("SQLConnection"));
+            //return new SqlConnection(_configuration.GetConnectionString("SQLConnection"));
+            return new SqlConnection(_configuration["SQLConnection"]);
 
             //var _builder = new SqlConnectionStringBuilder();
             //_builder.DataSource = db_source;
