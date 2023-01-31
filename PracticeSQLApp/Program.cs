@@ -9,7 +9,7 @@ builder.Host.ConfigureAppConfiguration(builder =>
 {
     builder.AddAzureAppConfiguration(options =>
     {
-        options.Connect("connectionString").UseFeatureFlags();
+        options.Connect(connectionString).UseFeatureFlags();
     }
     );
 });
