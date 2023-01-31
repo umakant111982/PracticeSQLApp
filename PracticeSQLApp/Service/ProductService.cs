@@ -1,4 +1,5 @@
-﻿using PracticeSQLApp.Model;
+﻿using Microsoft.FeatureManagement;
+using PracticeSQLApp.Model;
 using System.Data.SqlClient;
 
 namespace PracticeSQLApp.Service
@@ -10,10 +11,23 @@ namespace PracticeSQLApp.Service
         //private static string db_password = "Pa55word";
         //private static string db_database_name = "appdb";
         private readonly IConfiguration _configuration;
-
-        public ProductService(IConfiguration configuration)
+        private readonly IFeatureManager _ifeatureManager;
+        public ProductService(IConfiguration configuration, IFeatureManager featureManager)
         {
             _configuration = configuration;
+            _ifeatureManager = featureManager;
+        }
+
+        public async Task<bool> IsBeta()
+        {
+            if (await _ifeatureManager.IsEnabledAsync("beta"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private SqlConnection GetConnection()

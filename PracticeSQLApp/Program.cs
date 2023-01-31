@@ -1,16 +1,24 @@
+using Microsoft.FeatureManagement;
 using PracticeSQLApp.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = "Endpoint=https://azureappconfiguration31.azconfig.io;Id=SICc-lh-s0:geJC+cTrn8HuPKF2YFJo;Secret=LY0D3wH4kJ0CPG7bkaILMyiWaJoekY8Ai7adwV4lpGM=";
+
 builder.Host.ConfigureAppConfiguration(builder =>
 {
-    builder.AddAzureAppConfiguration(connectionString);
+    builder.AddAzureAppConfiguration(options =>
+    {
+        options.Connect("connectionString").UseFeatureFlags();
+    }
+    );
 });
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.AddFeatureManagement();
+
 
 var app = builder.Build();
 

@@ -1,35 +1,39 @@
-﻿
-@page
+﻿@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
+@if (Model.IsBeta)
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core - Umakant Yadav - Beta Version</a>.</p>
+    </div>
+
+}
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core - Umakant Yadav</a>.</p>
-</div>
-<div class="text-center">
-    <h1 class="display-4">This is a list of Products</h1>    
+    <h1 class="display-4">This is a list of Products</h1>
     <table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Product ID</th>
-      <th scope="col">Product Names</th>
-      <th scope="col">Quantity</th>      
-    </tr>
-  </thead>
-   <tbody>
-    
-        @foreach(var product in Model.Products)
-                {
-                    <tr>
+        <thead>
+            <tr>
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Names</th>
+                <th scope="col">Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var product in Model.Products)
+            {
+                <tr>
                     <th scope="row">@product.ProductID</th>
                     <td>@product.ProductName</td>
                     <td>@product.Quantity</td>
-                    </tr>
-                }                
-    
-    </tbody>
-  </table>
+                </tr>
+            }
+
+        </tbody>
+    </table>
 </div>

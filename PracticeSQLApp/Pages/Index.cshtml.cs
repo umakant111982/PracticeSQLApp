@@ -11,6 +11,7 @@ namespace PracticeSQLApp.Pages
         private readonly ILogger<IndexModel> _logger;
         public List<Product> Products;
         private readonly IProductService _productService;
+        public bool IsBeta;
 
         //public IndexModel(ILogger<IndexModel> logger)
         //{
@@ -24,6 +25,7 @@ namespace PracticeSQLApp.Pages
 
         public void OnGet()
         {
+            IsBeta = _productService.IsBeta().Result;
             Products =  _productService.GetProducts();
         }
     }
