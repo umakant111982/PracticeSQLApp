@@ -4,7 +4,7 @@ namespace PracticeSQLApp.Service
 {
     public interface IProductService
     {
-        List<Product> GetProducts();
+        Task<List<Product>> GetProducts();
         Task<bool> IsBeta();
     }
 }

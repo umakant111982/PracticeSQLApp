@@ -26,7 +26,7 @@ namespace PracticeSQLApp.Pages
         public void OnGet()
         {
             IsBeta = _productService.IsBeta().Result;
-            Products =  _productService.GetProducts();
+            Products =  _productService.GetProducts().GetAwaiter().GetResult();
         }
     }
 }

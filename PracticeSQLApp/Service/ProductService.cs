@@ -1,6 +1,7 @@
 ﻿using Microsoft.FeatureManagement;
 using PracticeSQLApp.Model;
 using System.Data.SqlClient;
+using System.Text.Json;
 
 namespace PracticeSQLApp.Service
 {
@@ -43,30 +44,45 @@ namespace PracticeSQLApp.Service
             //return new SqlConnection(_builder.ConnectionString);
         }
 
-        public List<Product> GetProducts()
+        //public List<Product> GetProducts()
+        //{
+        //    List<Product> _products_lst = new List<Product>();
+        //    string _statement = "SELECT ProductID,ProductName,Quantity from Products";
+        //    SqlConnection _sqlConnection = GetConnection();
+        //    _sqlConnection.Open();
+
+        //    SqlCommand _sqlCommand = new SqlCommand(_statement, _sqlConnection);
+
+        //    using (SqlDataReader _reader = _sqlCommand.ExecuteReader())
+        //    {
+        //        while (_reader.Read())
+        //        {
+        //            Product _product = new Product()
+        //            {
+        //                ProductID = _reader.GetInt32(0),
+        //                ProductName = _reader.GetString(1),
+        //                Quantity = _reader.GetInt32(2)
+        //            };
+        //            _products_lst.Add(_product);
+        //        }
+
+        //    }
+        //    return _products_lst;
+        //}
+
+        public async Task<List<Product>> GetProducts()
         {
-            List<Product> _products_lst = new List<Product>();
-            string _statement = "SELECT ProductID,ProductName,Quantity from Products";
-            SqlConnection _sqlConnection = GetConnection();
-            _sqlConnection.Open();
+            string functionURL = "https://azurefunctionapp33.azurewebsites.net/api/GetProducts?code=MY4iCVX_Me-DQa2tDdPJsBGziuDNEYWVt3myNIJfHNsuAzFurIdlJg==";
 
-            SqlCommand _sqlCommand = new SqlCommand(_statement, _sqlConnection);
-
-            using (SqlDataReader _reader = _sqlCommand.ExecuteReader())
+            using (HttpClient client = new HttpClient())
             {
-                while (_reader.Read())
-                {
-                    Product _product = new Product()
-                    {
-                        ProductID = _reader.GetInt32(0),
-                        ProductName = _reader.GetString(1),
-                        Quantity = _reader.GetInt32(2)
-                    };
-                    _products_lst.Add(_product);
-                }
+                HttpResponseMessage responseMessage = await client.GetAsync(functionURL);
 
+                string content = await responseMessage.Content.ReadAsStringAsync();
+
+                return JsonSerializer.Deserialize<List<Product>>(content);
             }
-            return _products_lst;
+
         }
 
     }
