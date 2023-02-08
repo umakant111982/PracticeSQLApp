@@ -1,0 +1,72 @@
+{
+  "subscriptionId": "f41c71d5-e9f2-48d6-a4ad-0bae691c33a2",
+  "notificationId": 15,
+  "id": "f2d64fd2-e20f-426b-a41a-e1063c349cf8",
+  "eventType": "workitem.created",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Task #52635 (Test Migration task 21) created by Umakant Yadav\r\n(https://dev.azure.com/dws10061675/web/wi.aspx?pcguid=43ae7db4-c846-407d-bbbe-e608855f82ba&id=52635)",
+    "html": "<a href=\"https://dev.azure.com/dws10061675/web/wi.aspx?pcguid=43ae7db4-c846-407d-bbbe-e608855f82ba&amp;id=52635\">Task #52635</a> (Test Migration task 21) created by Umakant Yadav",
+    "markdown": "[Task #52635](https://dev.azure.com/dws10061675/web/wi.aspx?pcguid=43ae7db4-c846-407d-bbbe-e608855f82ba&id=52635) (Test Migration task 21) created by Umakant Yadav"
+  },
+  "detailedMessage": {
+    "text": "Task #52635 (Test Migration task 21) created by Umakant Yadav\r\n(https://dev.azure.com/dws10061675/web/wi.aspx?pcguid=43ae7db4-c846-407d-bbbe-e608855f82ba&id=52635)\r\n\r\n- Area: DuckCreekSuite\\DevOps\r\n- Iteration: DuckCreekSuite\r\n- State: New\r\n",
+    "html": "<a href=\"https://dev.azure.com/dws10061675/web/wi.aspx?pcguid=43ae7db4-c846-407d-bbbe-e608855f82ba&amp;id=52635\">Task #52635</a> (Test Migration task 21) created by Umakant Yadav<ul>\r\n<li>Area: DuckCreekSuite\\DevOps</li>\r\n<li>Iteration: DuckCreekSuite</li>\r\n<li>State: New</li></ul>",
+    "markdown": "[Task #52635](https://dev.azure.com/dws10061675/web/wi.aspx?pcguid=43ae7db4-c846-407d-bbbe-e608855f82ba&id=52635) (Test Migration task 21) created by Umakant Yadav\r\n\r\n* Area: DuckCreekSuite\\DevOps\r\n* Iteration: DuckCreekSuite\r\n* State: New\r\n"
+  },
+  "resource": {
+    "id": 52636,
+    "rev": 1,
+    "fields": {
+      "System.AreaPath": "BMICTest\\DuckCreekSuite\\DevOps",
+      "System.WorkItemType": "Task",
+      "System.IterationPath": "BMICTest\\DuckCreekSuite\\DevOps",
+      "System.Title": "Test Migration task 36",
+      "Microsoft.VSTS.Common.Priority": 3,
+      "Microsoft.VSTS.Common.Activity": "Deployment",
+      "Custom.Solution": "<div><span style=\"display:inline !important;\">Test solution for task 36</span><br> </div>",
+      "Custom.Notes": "<div>test notes for task 36</div>",
+      "System.Description": "Added description for task 36"
+    },
+    "_links": {
+      "self": {
+        "href": "https://dev.azure.com/dws10061675/0d1fe8b5-ae8e-48c3-9f6d-23f2398eadc6/_apis/wit/workItems/52635"
+      },
+      "workItemUpdates": {
+        "href": "https://dev.azure.com/dws10061675/0d1fe8b5-ae8e-48c3-9f6d-23f2398eadc6/_apis/wit/workItems/52635/updates"
+      },
+      "workItemRevisions": {
+        "href": "https://dev.azure.com/dws10061675/0d1fe8b5-ae8e-48c3-9f6d-23f2398eadc6/_apis/wit/workItems/52635/revisions"
+      },
+      "workItemComments": {
+        "href": "https://dev.azure.com/dws10061675/0d1fe8b5-ae8e-48c3-9f6d-23f2398eadc6/_apis/wit/workItems/52635/comments"
+      },
+      "html": {
+        "href": "https://dev.azure.com/dws10061675/0d1fe8b5-ae8e-48c3-9f6d-23f2398eadc6/_workitems/edit/52635"
+      },
+      "workItemType": {
+        "href": "https://dev.azure.com/dws10061675/0d1fe8b5-ae8e-48c3-9f6d-23f2398eadc6/_apis/wit/workItemTypes/Task"
+      },
+      "fields": {
+        "href": "https://dev.azure.com/dws10061675/0d1fe8b5-ae8e-48c3-9f6d-23f2398eadc6/_apis/wit/fields"
+      }
+    },
+    "url": "https://dev.azure.com/dws10061675/0d1fe8b5-ae8e-48c3-9f6d-23f2398eadc6/_apis/wit/workItems/52635"
+  },
+  "resourceVersion": "1.0",
+  "resourceContainers": {
+    "collection": {
+      "id": "43ae7db4-c846-407d-bbbe-e608855f82ba",
+      "baseUrl": "https://dev.azure.com/dws10061675/"
+    },
+    "account": {
+      "id": "cfe6edf8-4a08-4ccd-bfff-4eb8809c02e6",
+      "baseUrl": "https://dev.azure.com/dws10061675/"
+    },
+    "project": {
+      "id": "0d1fe8b5-ae8e-48c3-9f6d-23f2398eadc6",
+      "baseUrl": "https://dev.azure.com/dws10061675/"
+    }
+  },
+  "createdDate": "2023-02-08T05:57:54.25871Z"
+}

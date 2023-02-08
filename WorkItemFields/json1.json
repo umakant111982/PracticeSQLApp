@@ -1,0 +1,37 @@
+[
+  {
+    "op": "add",
+    "path": "/fields/System.Title",
+    "value": "Test Migration task 27"
+  },
+  {
+    "op": "add",
+    "path": "/fields/System.Description",
+    "value": "Added description for task 27"
+  },
+  {
+    "op": "add",
+    "path": "/fields/System.AreaPath",
+    "value": "BMICTest\\DuckCreekSuite\\DevOps"
+  },
+  {
+    "op": "add",
+    "path": "/fields/System.IterationPath",
+    "value": "BMICTest\\DuckCreekSuite\\DevOps"
+  }
+]
+
+      "System.AreaPath": "BMICTest\\DuckCreekSuite\\DevOps",
+      "System.TeamProject": "DuckCreekSuite",
+      "System.IterationPath": "BMICTest\\DuckCreekSuite\\DevOps",
+      "System.State": "New",
+      "System.Reason": "New",
+      "System.CreatedDate": "2023-02-08T05:57:47.19Z",
+      "System.CreatedBy": "Umakant Yadav <Umakant.Yadav@dws10061675.onmicrosoft.com>",
+      "System.ChangedDate": "2023-02-08T05:57:47.19Z",
+      "System.ChangedBy": "Umakant Yadav <Umakant.Yadav@dws10061675.onmicrosoft.com>",
+      "System.CommentCount": 0,      
+      "Microsoft.VSTS.Common.StateChangeDate": "2023-02-08T05:57:47.19Z",      
+      "Custom.TestCaseSignoffbyBAs": "No", => Not Working as this field is not present in target Organisation Project.
+      "System.Description": "Added description for task 29",
+      "Custom.HLRUniqueID": "Refer to user story"

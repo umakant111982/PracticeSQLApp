@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeSQLApp", "PracticeSQLApp\PracticeSQLApp.csproj", "{B594BE8C-D5F2-4860-AE2A-175945480307}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeSQLApp", "PracticeSQLApp\PracticeSQLApp.csproj", "{B594BE8C-D5F2-4860-AE2A-175945480307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkItemFields", "WorkItemFields\WorkItemFields.csproj", "{B20BBDA1-F883-4051-A2CD-3B8A25932FDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B594BE8C-D5F2-4860-AE2A-175945480307}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B594BE8C-D5F2-4860-AE2A-175945480307}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B594BE8C-D5F2-4860-AE2A-175945480307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B20BBDA1-F883-4051-A2CD-3B8A25932FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B20BBDA1-F883-4051-A2CD-3B8A25932FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B20BBDA1-F883-4051-A2CD-3B8A25932FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B20BBDA1-F883-4051-A2CD-3B8A25932FDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
